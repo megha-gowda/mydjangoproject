@@ -1,0 +1,19 @@
+{% extends 'myapp/header.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+{% block content %}
+<form name="otp" method="post" action="{%  url 'validate_otp' %}">
+	{% csrf_token %}
+	<input type="hidden" name="email" value="{{email}}">
+	<input type="hidden" name="otp" value="{{otp}}">
+	<input type="text" name="e_otp">
+	<input type="submit" value="Validate">
+</form>
+{% endblock %}
+</body>
+</html>

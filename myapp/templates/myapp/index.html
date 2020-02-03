@@ -1,0 +1,17 @@
+{% extends 'myapp/header.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+{% block content %}
+<center>
+{% if msg %}
+	{{msg}}
+{% endif %}
+</center>
+{% endblock %}
+</body>
+</html>
